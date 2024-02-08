@@ -12,5 +12,10 @@ router.post("/visitor_add",async(req,res)=>{
         status:"success"
     })
 })
+router.get("/visitor_view",async(req,res)=>{
+    let data=await visitorModel.find()
+    res.json(data)
+    res.send("hello")
 
+})
 module.exports=router
